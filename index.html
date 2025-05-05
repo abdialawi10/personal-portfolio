@@ -1,54 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="body.css">
 </head>
 <body>
-  
-    <nav>
-        <ul>
-            <li><a href="#about">About ME</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-    <section id="intro">
-        <h1>Hello, I'm <span>Abdi Alawi</span></h1>
-        <p>Software Engineer</p>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <img src="abdi copy.jpeg" alt="My Photo">
-            <div class="about-text">
-                <p>I'm a freshman pursuing a computer science degree at the univeristy of Wisconsin- Green Bay.</p>
-                <p>Skills I'm working on:</p>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+    <main>
+        <section id="welcome-section">
+            <div class="welcome-content">
+                <h1>Hi, I'm <span class="highlight">Abdi Alawi</span></h1>
+                <p>A Freshman Software engineer at the university of wisconsin- Green Bay</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-info">
-            <p>Email: alawam01@uwgb.edu</p>
-            <p>Phone: (920) 501-2521</p>
-            <a href="https://www.linkedin.com/in/abdi-alawi-916ba7270/" target="_blank">LinkedIn</a>
-        </div>
-    </section>
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a upcoming software engineer that has some knowledge on html, css, javascript, and C++</p>
+                    <p>When I'm not coding, I like to play soccer, volleyball, and video games</p>
+                    <p>My skills include:</p>
+                    <ul class="skills-list">
+                        <li>Front-end Development</li>
+                        <li>Responsive Design</li>
+                        <li>UI/UX Principles</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src='abdi.jpeg' alt="Profile picture" class="profile-img">
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me!</h2>
+            <div class="contact-content">
+                <p>My contact information is down below so feel free to contact me</p>
+                <div class="contact-links">
+                    <a href="mailto:alawam01@uwgb.edu" class="contact-details">
+                        <i class="fas fa-envelope"></i> alawam01@uwgb.edu
+                    </a>
+                    <a href="tel:+1234567890" class="contact-details">
+                        <i class="fas fa-phone"></i> (920) 501-2521
+                    </a>
+                    <a href="https://www.linkedin.com/in/abdi-alawi-916ba7270/" target="_blank" class="contact-details">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>© <span id="current-year"></span> My Portfolio</p>
+        <p>&copy; <span id="year"></span> Abdi Alawi. COMP SCI 250 .</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="body.js"></script>
 </body>
-</html>
+</html
