@@ -1,32 +1,40 @@
-// Update the copyright year automatically
-function updateYear() {
-    var yearElement = document.getElementById('current-year');
-    var currentYear = new Date().getFullYear();
-    yearElement.textContent = currentYear;
-}
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Make navigation links scroll smoothly
-function smoothScroll() {
-    var navLinks = document.querySelectorAll('nav a');
-    
-    for (var i = 0; i < navLinks.length; i++) {
-        navLinks[i].addEventListener('click', function(event) {
-            event.preventDefault();
-            var targetId = this.getAttribute('href');
-            var targetElement = document.querySelector(targetId);
-            var navHeight = document.querySelector('nav').offsetHeight;
-            var targetPosition = targetElement.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
+
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
         });
-    }
-}
+    });
+});
 
-// Run all functions when the page loads
-window.onload = function() {
-    updateYear();
-    smoothScroll();
+
+document.getElementById('cta-button').addEventListener('click', function() {
+    document.getElementById('projects').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+const observerOptions = {
+    threshold: 0.1
 };
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+});
