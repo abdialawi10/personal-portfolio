@@ -1,2 +1,2 @@
 # personal-portfolio
-Personal Portfolio
+Personal Portfolio For Comp Sci 201
